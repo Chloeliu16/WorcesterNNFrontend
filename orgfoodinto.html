@@ -1,0 +1,124 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Sriracha&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Madimi+One&family=Sriracha&display=swap">
+    <link rel="stylesheet" href="orgfoodinfo.css">
+    <title>Organization Food Form</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Neighbor Nourish</h1>
+    </header>
+    <div class="sidebar">
+        <!--logo-->
+        <h1 class="logo">Neighbor Nourish</h1>
+        <!--list of menu-->
+        <div class="sidebar-menus">
+            <a href="#"><ion-icon name="pizza-outline"></ion-icon>Upload</a>
+            <a href="#"><ion-icon name="pencil-outline"></ion-icon>Modify</a>
+            <!-- <a href="#"><ion-icon name="reader-outline"></ion-icon>Order Status</a> -->
+            <!-- <a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a>
+                <a href="#"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+                <a href="#"><ion-icon name="settings-outline"></ion-icon>Setting</a> -->
+        </div>
+        <!--logout-->
+        <div class="sidebar-logout">
+            <a href="#"><ion-icon name="person-outline"></ion-icon>Profile</a>
+            <a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+    <!-- main -->>
+    <div class="container">
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close"></ion-icon>
+            </span>
+            <div class="form-box food">
+                <div class="welcomecus">
+                    <p>Hi, Organization!</p>
+                </div>
+                <h2>Add the food info you will provide</h2>
+
+                <form action="#">
+                    <div class="entireform">
+                        <div class="leftform">
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="mail"></ion-icon>
+                                </span>
+                                <input type="Food Type" required>
+                                <label>Event Name</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="lock-closed"></ion-icon>
+                                </span>
+                                <input type="Food Name" required>
+                                <label>Event Address</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="lock-closed"></ion-icon>
+                                </span>
+                                <input type="Food Number" required>
+                                <label>Provider</label>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="lock-closed"></ion-icon>
+                                </span>
+                                <input type="Start Time" required>
+                                <label>Start Time</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="lock-closed"></ion-icon>
+                                </span>
+                                <input type="End Time" required>
+                                <label>End Time</label>
+                            </div>
+                        </div>
+                        <div class="rightform">
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="lock-closed"></ion-icon>
+                                </span>
+                                <input type="End Time" required>
+                                <label>Contact</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="lock-closed"></ion-icon>
+                                </span>
+                                <input type="End Time" required>
+                                <label>Contact Number</label>
+                            </div>
+                            <p>Event Detail</p>
+                            <div class="input-box2">
+                                <textarea required></textarea>
+                                <!-- <input type="End Time" required> -->
+                                <!-- <label>Event Detail</label> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="submit" class="btn">Submit</button>
+                        <button type="submit" class="btn">Reset</button>
+                        <button type="submit" class="btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<!--adding ion icon-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

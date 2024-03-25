@@ -1,0 +1,383 @@
+:root {
+    --primaryColor: #5fcc25;
+    --darkBlueColor: #e4eb33;
+    --secondaryColor: #e1fb1bfb;
+    --whiteColor: #fff;
+    --blackColor: #222;
+    --softGreenColor: #13d33627;
+    --darkGreyColor: #a7a7a7;
+    --greyCOlor: #f5f5f5;
+    --softOrangeColor: #fba609;
+    --darkGreenColor: #1bad05;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sidebar {
+    height: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+/*横着排列*/
+.sidebar-menus {
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 2px; */
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.sidebar-logout {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.sidebar-menus a,
+.sidebar-logout a {
+    white-space: nowrap;
+    padding: 5% 8%;
+    margin: -1rem 0;
+    /*调整home bill等的距离*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0rem;
+    /*标签icon与字的距离*/
+    text-decoration: none;
+    color: var(--whiteColor);
+}
+
+/*icon size*/
+.sidebar-menus a ion-icon {
+    font-size: 20px;
+}
+
+.sidebar-logout a ion-icon {
+    font-size: 20px;
+}
+
+/*--悬停改变--*/
+.sidebar-menus a:hover,
+.sidebar-logout a:hover {
+    background-color: var(--secondaryColor);
+    border-radius: 50px;
+}
+
+h1 {
+    margin-top: -20px;
+    font-family: "Sriracha", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.welcomecus {
+    font-size: 20px;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+header {
+    height: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: #fff;
+}
+
+.wrapper {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    /*磨砂效果*/
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    overflow: hidden;
+    transition: height .2s ease;
+}
+
+
+.wrapper {
+    /* width: 100%;  */
+    padding: 40px;
+}
+
+/* .form-box {
+        width: 100%;
+        padding: 40px;
+} */
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--darkBlueColor);
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: var(--darkBlueColor);
+    text-align: center;
+}
+
+.entireform {
+    display: flex;
+    /* justify-content: space-between; */
+    /* flex-direction: row; */
+    margin-left: 0px;
+}
+
+.leftform,
+.rightform {
+    flex: 1;
+    margin-right: 40px;
+    /* 使得左右两部分平分可用空间 */
+}
+
+/* 如果你想要更多的控制，比如间距，可以这样做 */
+.leftform {
+    width: 200px;
+    margin-left: 0px;
+    /* 右侧间距 */
+}
+
+.rightform {
+    margin-left: 0px;
+    width: 200px;
+    /* 左侧间距 */
+    /* margin-top: 45px; */
+    color: #e4eb33;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--darkBlueColor);
+    margin: 30px 0;
+}
+
+.input-box2 {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* border-bottom: 2px solid var(--darkBlueColor); */
+    margin: 30px 0;
+    width: 100%;
+    /* height: 100%; */
+    background: transparent;
+    /* border: 2px solid var(--darkBlueColor); */
+    /* 添加边框样式 */
+    outline: none;
+    box-sizing: border-box;
+    /* 确保边框不会增加输入框的实际尺寸 */
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--darkBlueColor);
+    font-weight: 500;
+    pointer-events: none;
+    /*鼠标事件会“穿透”该元素并作用于其下方的元素。*/
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+    /*鼠标点一下lable会网上移动*/
+}
+
+.rightform>p {
+    margin-top: 47px;
+}
+
+.input-box2 textarea {
+    width: 100%;
+    height: 160px;
+    background: transparent;
+    border: 2px solid var(--darkBlueColor);
+    margin-top: -15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    font-size: 1em;
+    color: var(--darkBlueColor);
+    font-weight: 400;
+    padding: 5px 35px 5px 5px;
+    /* 调整内边距确保文本从左上角开始 */
+    box-sizing: border-box;
+    resize: vertical;
+    /* 允许用户垂直调整大小，或使用"none"禁止调整 */
+    overflow: auto;
+    /* 自动显示滚动条 */
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--darkBlueColor);
+    font-weight: 600;
+    /*输入字体的样式*/
+    padding: 0 35px 0 5px;
+}
+
+.input-box2 input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--darkBlueColor);
+    font-weight: 600;
+    /*输入字体的样式*/
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--darkBlueColor);
+    /* line-height: 0px; */
+    transform: translateY(80%);
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: var(--darkBlueColor);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: var(--darkBlueColor);
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: var(--darkBlueColor);
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* 使得两个按钮分布于容器的两端 */
+    align-items: center;
+    /* 确保按钮垂直居中 */
+    padding: 0 20px;
+    /* 容器的左右内边距，确保即使按钮靠近边缘也有一定间隔 */
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    width: 180px;
+    height: 45px;
+    background: var(--darkBlueColor);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    padding: 0;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: var(--primaryColor);
+}
+
+.login-register {
+    font-size: .9em;
+    color: var(--darkBlueColor);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: var(--darkBlueColor);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}

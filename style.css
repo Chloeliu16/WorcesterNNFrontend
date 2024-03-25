@@ -1,0 +1,409 @@
+:root {
+    --primaryColor: #5fcc25;
+    --secondaryColor: #e1fb1bfb;
+    --whiteColor: #fff;
+    --blackColor: #222;
+    --softGreenColor: #13d33627;
+    --darkGreyColor: #a7a7a7;
+    --greyCOlor: #f5f5f5;
+    --softOrangeColor: #fba609;
+    --darkGreenColor: #1bad05;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+h1 {
+    margin-top: -20px;
+    font-family: "Sriracha", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sidebar {
+    height: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+/*横着排列*/
+.sidebar-menus {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-menus a,
+.sidebar-logout a {
+    white-space: nowrap;
+    padding: 5% 8%;
+    margin: -1rem 0;
+    /*调整home bill等的距离*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0rem;
+    /*标签icon与字的距离*/
+    text-decoration: none;
+    color: var(--whiteColor);
+}
+
+/*icon size*/
+.sidebar-menus a ion-icon {
+    font-size: 20px;
+}
+
+.sidebar-logout a ion-icon {
+    font-size: 40px;
+}
+
+/*--悬停改变--*/
+.sidebar-menus a:hover,
+.sidebar-logout a:hover {
+    background-color: var(--secondaryColor);
+    border-radius: 50px;
+}
+
+.main {
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    /*enough long to cover whole main body*/
+    padding: 2%;
+    background-color: var(--softGreenColor);
+    margin-top: 60px;
+    /*avoid appear in sidebar*/
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.search {
+    position: relative;
+    /*后面加的，为了确保search button位置右边对齐*/
+    width: 40%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--whiteColor);
+    border-radius: 20px;
+}
+
+.search input {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.search-btn {
+    background-color: var(--softOrangeColor);
+    color: var(--whiteColor);
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    /* 紧靠容器的右侧 */
+    top: 50%;
+    /* 根据需要调整，使按钮垂直居中 */
+    transform: translateY(-50%);
+}
+
+.search:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /*鼠标放在搜索框上时会变成光标*/
+}
+
+.search-btn:hover {
+    /*鼠标放上去会变成主色*/
+    background-color: var(--primaryColor);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/*user和cart两个标志的样式设置*/
+.user,
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--whiteColor);
+    font-size: 20px;
+    color: var(--primaryColor);
+    text-decoration: none;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user:hover,
+.cart:hover {
+    box-shadow: 0px 0px 5px var(--primaryColor);
+}
+
+.main-highlight {
+    margin: 3% 0;
+    /*距离上面和左右的距离*/
+    padding: 2%;
+    background-color: #fba609;
+    border-radius: 8px;
+}
+
+.main-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 20px;
+}
+
+.main-arrow {
+    font-size: 24px;
+}
+
+.back,
+.next {
+    cursor: pointer;
+}
+
+.back:hover,
+.next:hover {
+    color: var(--primaryColor)
+}
+
+.highlight-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    border-radius: 8px;
+    gap: 1.5rem;
+    overflow-x: hidden;
+}
+
+.highlight-card {
+    display: flex;
+    flex-direction: row;
+    min-width: 200px;
+    width: 80%;
+    height: 100%;
+    grid-area: 1rem;
+    border-radius: 8px;
+    padding: 1%;
+    background-color: var(--greyCOlor);
+    cursor: pointer;
+}
+
+.highlight-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: centers;
+}
+
+.highlight-desc h4 {
+    margin-left: 5px;
+    color: var(--darkGreenColor);
+}
+
+.highlight-desc p {
+    margin-left: 5px;
+    color: var(--blackColor);
+    font-size: 13px;
+}
+
+.highlight-card:hover {
+    background-color: var(--whiteColor);
+    box-shadow: rgba(176, 176, 176, 0.2) 0px 2px 8px 0px;
+}
+
+.main-menus {
+    min-height: 100%;
+    background-color: var(--greyCOlor);
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.main-filter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.back-menus,
+.next-menus {
+    cursor: pointer;
+}
+
+.back-menus:hover,
+.next-menus:hover {
+    color: var(--primaryColor);
+}
+
+.filter-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100px;
+    gap: 1.2rem;
+}
+
+.filter-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 80px;
+    height: 100%;
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
+    border-radius: 8px;
+    border: 1px solid var(--softGreenColor);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    font-size: 30px;
+    background-color: var(--softGreenColor);
+    color: var(--primaryColor);
+    border-radius: 8px;
+}
+
+.filter-card:hover {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    /*font*/
+}
+
+.filter-card:hover .filter-icon {
+    background-color: var(--whiteColor);
+
+}
+
+.divider {
+    margin: 1rem 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--primaryColor);
+    border: none;
+}
+
+.main-detail {
+    margin: 1rem 0 1.5rem 0;
+}
+
+.detail-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+    margin-top: 1rem;
+    gap: 2%;
+    border-radius: 8px;
+}
+
+.detail-card {
+    min-height: 280px;
+    height: 100%;
+    background-color: var(--whiteColor);
+    border-radius: 8px;
+    margin: 1% 0;
+    box-shadow: rgba(176, 176, 176, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+.detail-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8);
+}
+
+.detail-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3%;
+    width: 100%
+}
+
+.detail-sub {
+    font-size: 12px;
+    color: var(--darkGreyColor);
+    letter-spacing: 0.5;
+    margin: 1% 0;
+}
+
+.price {
+    color: var(--primaryColor);
+}
+
+.detail-favorates {
+    font-size: 25px;
+}
+
+.detail-card:hover {
+    /*点击变亮*/
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.detail-card:hover .detail-img {
+    /*图片也跟着card变亮*/
+    filter: opacity(1);
+}
+
+.detail-card:hover .detail-name h4 {
+    color: var(--primaryColor);
+}
+
+.detail-card:hover .price {
+    letter-spacing: 1.5;
+    /*分散开*/
+}

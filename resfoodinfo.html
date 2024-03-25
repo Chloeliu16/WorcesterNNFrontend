@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Sriracha&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Madimi+One&family=Sriracha&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Madimi+One&family=Sriracha&display=swap">
+    <link rel="stylesheet" href="resfoodinfo.css">
+    <title>Restaurant Food Form</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Neighbor Nourish</h1>
+    </header>
+    <div class="sidebar">
+        <!--logo-->
+        <h1 class="logo">Neighbor Nourish</h1>
+        <!--list of menu-->
+        <div class="sidebar-menus">
+            <a href="#"><ion-icon name="pizza-outline"></ion-icon>Upload</a>
+            <a href="#"><ion-icon name="pencil-outline"></ion-icon>Modify</a>
+            <a href="#"><ion-icon name="reader-outline"></ion-icon>Order Status</a>
+            <!-- <a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a>
+            <a href="#"><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a>
+            <a href="#"><ion-icon name="settings-outline"></ion-icon>Setting</a> -->
+        </div>
+        <!--logout-->
+        <div class="sidebar-logout">
+            <a href="#"><ion-icon name="person-outline"></ion-icon>Profile</a>
+            <a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="container">
+
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close"></ion-icon>
+            </span>
+            <div class="form-box food">
+                <div class="welcomecus">
+                    <p>Hi, Restaurant!</p>
+                </div>
+                <h2>Add the food you will provide</h2>
+                <form action="#">
+                    <div class="select-box">
+                        <p>Food Type(Please choose)</p>
+                        <select>
+                            <option value="option1">选项1</option>
+                            <option value="option2">选项2</option>
+                            <option value="option3">选项3</option>
+                        </select>
+                        <!-- <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span> -->
+                        <!-- <input type="Food Type" required> -->
+                        <!-- <label>Food Type</label> -->
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                        </span>
+                        <input type="Food Name" required>
+                        <label>Food Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="Food Number" required>
+                        <label>Food Number</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="Start Time" required>
+                        <label>Start Time</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="End Time" required>
+                        <label>End Time</label>
+                    </div>
+                    <!-- <div class="Food Number">
+                        <lable><input type="checkbox">Remember-me</lable>
+                        <a href="#">Forgot password</a>
+                    </div> -->
+                    <div class="button">
+                        <button type="submit" class="btn">Submit</button>
+                        <button type="submit" class="btn">Reset</button>
+                        <button type="submit" class="btn">Cancel</button>
+                    </div>
+                    <!-- <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<!--adding ion icon-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
